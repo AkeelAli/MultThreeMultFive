@@ -11,7 +11,7 @@ public class MultThreeMultFiveTest {
 		/* Test all possible multiples of 3 between 1 and 100 */
 		for (int i = 3; i <= 100; i += 3) {
 			if (i % 5 != 0) // eliminate multiples of 3 AND 5
-				assertEquals("Multiples of 3 must print MultThree", "MultThree", MultThreeMultFive.translateNumber(i));
+				assertEquals("Multiples of 3 must print " + MultThreeMultFive.MULT_THREE, MultThreeMultFive.MULT_THREE, MultThreeMultFive.translateNumber(i));
 		}
 	}
 	
@@ -20,7 +20,7 @@ public class MultThreeMultFiveTest {
 		/* Test all possible multiples of 5 between 1 and 100 */
 		for (int i = 5; i <= 100; i += 5) {
 			if (i % 3 != 0) // eliminate multiples of 3 AND 5
-				assertEquals("Multiples of 5 must print MultFive", "MultFive", MultThreeMultFive.translateNumber(i));
+				assertEquals("Multiples of 5 must print " + MultThreeMultFive.MULT_FIVE, MultThreeMultFive.MULT_FIVE, MultThreeMultFive.translateNumber(i));
 		}
 	}
 	
@@ -29,7 +29,7 @@ public class MultThreeMultFiveTest {
 		/* Test all possible multiples of 3 and 5 between 1 and 100 */
 		for (int i = 5; i <= 100; i += 5) {
 			if (i % 3 == 0) // only include multiples of 3 and 5
-				assertEquals("Multiples of 3 and 5 must print MultThreeMultFive", "MultThreeMultFive", MultThreeMultFive.translateNumber(i));
+				assertEquals("Multiples of 3 and 5 must print " + MultThreeMultFive.MULT_THREE_MULT_FIVE, MultThreeMultFive.MULT_THREE_MULT_FIVE, MultThreeMultFive.translateNumber(i));
 		}
 		
 	}

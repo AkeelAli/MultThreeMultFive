@@ -2,12 +2,16 @@
  * @author Akeel Ali
  */
 public class MultThreeMultFive {
+	
+	public final static String MULT_THREE = "MultThree";
+	public final static String MULT_FIVE = "MultFive";
+	public final static String MULT_THREE_MULT_FIVE = "MultThreeMultFive";
 
 	/**
 	 * Translates a given number to its string representation.
-	 * If the number is a multiple of 3, return "MultThree"
-	 * If the number is a multiple of 5, return "MultFive"
-	 * If the number is a multiple of 3 and 5, return "MultThreeMultFive"
+	 * If the number is a multiple of 3, return {@link MultThreeMultFive#MULT_THREE}
+	 * If the number is a multiple of 5, return {@link MultThreeMultFive#MULT_FIVE}
+	 * If the number is a multiple of 3 and 5, return {@link MultThreeMultFive#MULT_THREE_MULT_FIVE}
 	 * Otherwise, return the string representation of the number
 	 * 
 	 * @param i	the integer number (Must be between 1 and 100)
@@ -21,11 +25,11 @@ public class MultThreeMultFive {
 		}
 		
 		if (i % 3 == 0) {
-			str += "MultThree";
+			str += MULT_THREE;
 		}
 		
 		if (i % 5 == 0) {
-			str += "MultFive";
+			str += MULT_FIVE;
 		}
 		
 		if (str.equals("")) {
